@@ -1,0 +1,89 @@
+@import "../../assets/master";
+
+.b-a {
+  transition: all 0.25s;
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 2px;
+  width: 20px;
+  border-radius: 1px;
+  background-color: #4B5563;
+}
+
+.menu {
+  box-shadow: 0 8px 48px rgba(0, 0, 0, .12);
+  border-radius: 50%;
+  background-color: $app-default;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  &__bar {
+    @extend .b-a;
+    right: 10px;
+    top: 20px;
+
+    &:before {
+      @extend .b-a;
+      top: -6px;
+    }
+
+    &:after {
+      @extend .b-a;
+      top: 6px;
+    }
+  }
+
+  &__list {
+    width: 250px;
+    background-color: $app-default;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    transition: 0.25s ease 0.2s;
+    box-shadow: 0 9px 30px rgba(0, 0, 0, .1);
+    opacity: 0;
+
+    @media (max-width: 425px) {
+      width: 200px;
+    }
+  }
+}
+
+
+.b-a-expanded {
+  top: -0px;
+}
+
+.menu_active {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  .menu__bar {
+    background-color: transparent;
+    &:before {
+      @extend .b-a-expanded;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      @extend .b-a-expanded;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .menu__list {
+    cursor: default;
+    transform: translate(-7px, 7px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: flat;
+    will-change: transform;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+
+

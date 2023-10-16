@@ -1,0 +1,41 @@
+@import "../../assets/master";
+
+.header {
+  transition: all ease .7s;
+  position: sticky;
+  top: 0;
+  padding-top: 37px;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  background-color: rgba(red($app-default), green($app-default), blue($app-default), 0.5);
+
+  &__wrap {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    max-width: 1280px;
+    width: 93.80vw;
+    margin: 0 auto;
+    @media (max-width: 425px) {
+      width: 90.80vw;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 1024px) {
+      width: 128px;
+      height: 24px;
+    }
+    @media (max-width: 768px) {
+      width: 112px;
+      height: 21px;
+    }
+    @media (max-width: 425px) {
+      width: 21px;
+      height: 20px;
+    }
+  }
+}
+
+
