@@ -18,6 +18,7 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+
   &__bar {
     @extend .b-a;
     right: 10px;
@@ -34,7 +35,8 @@
     }
   }
 
-  &__list {
+  &__nav {
+    list-style: none;
     width: 250px;
     background-color: $app-default;
     border-radius: 15px;
@@ -51,6 +53,27 @@
       width: 200px;
     }
   }
+
+  &__list{
+    list-style: none;
+    padding-left: 25px;
+  }
+  &__item{
+    padding: 5px;
+  }
+
+  &__link{
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 0;
+    text-decoration: none;
+    color: $heading;
+    transition: opacity 0.7s ease;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+
 }
 
 
@@ -62,8 +85,10 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+
   .menu__bar {
     background-color: transparent;
+
     &:before {
       @extend .b-a-expanded;
       transform: rotate(45deg);
@@ -75,7 +100,7 @@
     }
   }
 
-  .menu__list {
+  .menu__nav {
     cursor: default;
     transform: translate(-7px, 7px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: flat;

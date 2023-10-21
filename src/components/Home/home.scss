@@ -1,0 +1,19 @@
+.home {
+  z-index: 1;
+  outline: 1px solid red;
+  width: 100%;
+  height: calc(100vh - 76px);
+  background: center / contain no-repeat url('../../img/home_lines.svg');
+  position: relative;
+
+  &__blur {
+    z-index: 3;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 13%;
+    left: 15%;
+    background: radial-gradient(2762.36% 537.65% at -49.5% -250%, #9BFFA5 29.24%, #AED3FF 47.38%, #C9D4EF 54.97%, #D798E1 65.75%, #CACFFA 81.77%);
+    filter: blur(150px)
+  }
+}

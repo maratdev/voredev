@@ -7,12 +7,12 @@ const NavBarMobile = () => {
     <>
       <div onClick={() => setChecked(!checked)} className={`menu ${checked ? 'menu_active' : ''}`}>
         <div className="menu__bar"></div>
-        <nav className="menu__list">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Contact Us</a></li>
+        <nav className="menu__nav">
+          <ul className="menu__list">
+            <li className="menu__item"><a className="menu__link" href="#">Home</a></li>
+            <li className="menu__item"><a className="menu__link" href="#">About</a></li>
+            <li className="menu__item"><a className="menu__link" href="#">Clients</a></li>
+            <li className="menu__item"><a className="menu__link" href="#">Contact Us</a></li>
           </ul>
         </nav>
       </div>
